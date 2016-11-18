@@ -71,7 +71,7 @@
             //后缀名检测
             var sps = file.name.split(".");
             if (sps.length < 2) return falsemsg('exts');
-            if (opt.exts.indexOf(sps[1].toLowerCase()) < 0) return falsemsg('exts');
+            if (opt.exts.indexOf(sps[sps.length-1].toLowerCase()) < 0) return falsemsg('exts');
             //大小检测
             if (file.size > opt.size) return falsemsg("size");
             return true;
